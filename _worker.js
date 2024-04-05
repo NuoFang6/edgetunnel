@@ -4,15 +4,14 @@ import { connect } from "cloudflare:sockets";
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = "1363d7bc-c705-4eb2-87a8-df7a53973375";
+let userID = "";
 
 let proxyIP = ""; // 小白勿动，该地址并不影响你的网速，这是给CF代理使用的。'cdn.xn--b6gac.eu.org, cdn-all.xn--b6gac.eu.org, workers.cloudflare.cyou'
 
 //let sub = '';// 留空则显示原版内容
-let sub = "vless-4ca.pages.dev"; // 内置优选订阅生成器，可自行搭建 https://github.com/cmliu/WorkerVless2sub
+let sub = ""; // 内置优选订阅生成器，可自行搭建 https://github.com/cmliu/WorkerVless2sub
 let subconverter = "api.v1.mk"; // clash订阅转换后端，目前使用肥羊的订阅转换功能。自带虚假uuid和host订阅。
-let subconfig =
-  "https://raw.githubusercontent.com/NuoFang6/edgetunnel/main/ACL4SSR.ini"; //订阅配置文件
+let subconfig = ""; //订阅配置文件 网址定义在变量SUBCONFIG
 // The user name and password do not contain special characters
 // Setting the address will ignore proxyIP
 // Example:  user:pass@host:port  or  host:port
