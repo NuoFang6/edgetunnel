@@ -1,4 +1,2 @@
 AND,((NETWORK,UDP),(DST-PORT,443,no-resolve))
-AND,((NETWORK,UDP),(GEOSITE,geolocation-!cn))
-AND,((NETWORK,UDP),(GEOIP,!cn,no-resolve))
 GEOSITE,category-ads-all
