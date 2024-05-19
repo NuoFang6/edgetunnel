@@ -1,0 +1,85 @@
+geodata-mode: true
+geosite-matcher: mph
+geodata-loader: memconservative
+geox-url:
+  geoip: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+  geosite: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+tcp-concurrent: true
+unified-delay: true
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: true
+  force-domain:
+    - +.netflix.com
+    - +.nflxvideo.net
+    - +.amazonaws.com
+    - +.media.dssott.com
+  skip-domain:
+    - +.bing.com
+    - +.apple.com
+    - dlg.io.mi.com
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+  override-destination: false
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - quic://223.5.5.5#DIRECT
+    - https://1.12.12.12/dns-query#DIRECT
+  use-hosts: false
+  nameserver:
+    - quic://dns.alidns.com#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  fallback:
+    - tcp://8.8.4.4#自动选择
+    - https://dns.google/dns-query#选择节点&h3=false
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  proxy-server-nameserver:
+    - quic://dns.alidns.com
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn,microsoft,google,steam,tailscale:
+      - tcp://8.8.8.8#自动选择
+      - https://dns.google/dns-query#选择节点&h3=false
+    "+.youtube.com,+.googlevideo.com,+.msftconnecttest.com,+.msftncsi.com,+.bing.com":
+      - tcp://8.8.8.8#自动选择
+      - https://cloudflare-dns.com/dns-query#选择节点&h3=false
+    "+.openwrt.ai":
+      - quic://dns.alidns.com#DIRECT
+      - https://doh.pub/dns-query#DIRECT
+  prefer-h3: true
+  cache-algorithm: arc
