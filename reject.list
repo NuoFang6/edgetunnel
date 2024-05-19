@@ -1,2 +1,2 @@
-NETWORK,UDP
+AND,((NETWORK,UDP),(DST-PORT,443,no-resolve))
 GEOSITE,category-ads-all

@@ -38,14 +38,14 @@ dns:
   ipv6: false
   default-nameserver:
     - quic://223.5.5.5#DIRECT
-    - https://1.12.12.12/dns-query#DIRECT
+    - https://1.12.12.12/dns-query#DIRECT&h3=false
   use-hosts: false
   nameserver:
     - quic://dns.alidns.com#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT&h3=false
   fallback:
     - tcp://8.8.4.4#自动选择
-    - https://dns.google/dns-query#选择节点&h3=false
+    - https://dns.google/dns-query#在此在此选择节点&h3=false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -73,12 +73,12 @@ dns:
   nameserver-policy:
     geosite:geolocation-!cn,microsoft,google,steam,tailscale:
       - tcp://8.8.8.8#自动选择
-      - https://dns.google/dns-query#选择节点&h3=false
+      - https://dns.google/dns-query#在此选择节点&h3=false
     "+.youtube.com,+.googlevideo.com,+.msftconnecttest.com,+.msftncsi.com,+.bing.com":
       - tcp://8.8.8.8#自动选择
-      - https://cloudflare-dns.com/dns-query#选择节点&h3=false
+      - https://cloudflare-dns.com/dns-query#在此选择节点&h3=false
     "+.openwrt.ai":
       - quic://dns.alidns.com#DIRECT
       - https://doh.pub/dns-query#DIRECT
-  prefer-h3: true
+  prefer-h3: false
   cache-algorithm: arc

@@ -15,4 +15,4 @@ DOMAIN-KEYWORD,google
 GEOSITE,google
 GEOSITE,microsoft
 GEOSITE,steam
-GEOIP,telegram
+GEOIP,telegram,no-resolve

@@ -1,3 +1,4 @@
+GEOIP,private,no-resolve
 GEOSITE,category-games@cn
 DOMAIN-KEYWORD,ubisoft
 GEOSITE,ubisoft
@@ -9,5 +10,4 @@ DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,codelife.cc
 GEOSITE,win-update
 GEOSITE,cn
-GEOIP,private
-GEOIP,cn
+GEOIP,cn,no-resolve
