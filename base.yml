@@ -67,7 +67,6 @@ dns:
       - 240.0.0.0/4
       - 255.255.255.255/32
   enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
   proxy-server-nameserver:
     - quic://dns.alidns.com
     - https://doh.pub/dns-query
