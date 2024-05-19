@@ -1,3 +1,4 @@
+ipv6: false
 geodata-mode: true
 geosite-matcher: mph
 geodata-loader: memconservative
