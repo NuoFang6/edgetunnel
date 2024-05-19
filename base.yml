@@ -2,38 +2,19 @@ ipv6: false
 geodata-mode: true
 geosite-matcher: mph
 geodata-loader: memconservative
+find-process-mode: off
+keep-alive-interval: 1800
+global-client-fingerprint: random
 geox-url:
   geoip: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
   geosite: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+geo-auto-update: true
+geo-update-interval: 24
 tcp-concurrent: true
 unified-delay: true
-sniffer:
-  enable: true
-  force-dns-mapping: false
-  parse-pure-ip: true
-  force-domain:
-    - +.netflix.com
-    - +.nflxvideo.net
-    - +.amazonaws.com
-    - +.media.dssott.com
-  skip-domain:
-    - +.bing.com
-    - +.apple.com
-    - dlg.io.mi.com
-  sniff:
-    HTTP:
-      ports:
-        - 80
-        - 8080-8880
-    TLS:
-      ports:
-        - 443
-        - 8443
-    QUIC:
-      ports:
-        - 443
-        - 8443
-  override-destination: false
+profile:
+  store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
   ipv6: false
@@ -83,3 +64,30 @@ dns:
       - https://doh.pub/dns-query#DIRECT
   prefer-h3: false
   cache-algorithm: arc
+sniffer:
+  enable: true
+  force-dns-mapping: false
+  parse-pure-ip: true
+  force-domain:
+    - +.netflix.com
+    - +.nflxvideo.net
+    - +.amazonaws.com
+    - +.media.dssott.com
+  skip-domain:
+    - +.bing.com
+    - +.apple.com
+    - dlg.io.mi.com
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+  override-destination: false
