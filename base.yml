@@ -46,7 +46,7 @@ dns:
     - https://doh.pub/dns-query#DIRECT&h3=false
   fallback:
     - tcp://8.8.4.4#自动选择
-    - https://dns.google/dns-query#在此在此选择节点&h3=false
+    - https://dns.google/dns-query#在此选择节点&h3=false
   fallback-filter:
     geoip: true
     geoip-code: CN
