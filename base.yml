@@ -92,6 +92,14 @@ sniffer:
         - 8443
   override-destination: false
 rule-providers:
+  AWAvenue:
+    type: http
+    path: ./AWAvenue.yaml
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
+    interval: 86400
+    proxy: DIRECT
+    behavior: domain
+    format: yaml
   AdRules:
     type: http
     path: ./AdRules.txt
