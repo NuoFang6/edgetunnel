@@ -1110,7 +1110,7 @@ function 配置信息(UUID, 域名地址) {
   tls: ${传输层安全[1]}
   udp: false
   sni: ${SNI}
-  client-fingerprint: ${指纹}
+  client-fingerprint: random
   ws-opts:
     path: "${路径}"
     headers:
