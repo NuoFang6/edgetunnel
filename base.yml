@@ -53,6 +53,8 @@ dns:
     - quic://dns.alidns.com
     - https://doh.pub/dns-query
   nameserver-policy:
+    "aeventlog.beacon.qq.com":
+      - rcode://success
     geosite:geolocation-!cn,microsoft,google,steam,tailscale:
       - tcp://8.8.8.8#自动选择
       - https://dns.google/dns-query#在此选择节点&h3=false
@@ -95,7 +97,7 @@ rule-providers:
   AWAvenue:
     type: http
     path: ./AWAvenue.yaml
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
+    url: https://mirror.ghproxy】.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
     interval: 86400
     proxy: DIRECT
     behavior: domain
@@ -108,11 +110,3 @@ rule-providers:
     proxy: DIRECT
     behavior: domain
     format: text
-  AntiAd:
-    type: http
-    path: ./AntiAd.yaml
-    url: https://anti-ad.net/clash.yaml
-    interval: 86400
-    proxy: DIRECT
-    behavior: domain
-    format: yaml
