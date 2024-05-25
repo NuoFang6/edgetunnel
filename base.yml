@@ -60,7 +60,7 @@ dns:
       - https://dns.google/dns-query#在此选择节点&h3=false
     "+.youtube.com,+.googlevideo.com,+.msftconnecttest.com,+.msftncsi.com,+.bing.com":
       - tcp://8.8.8.8#自动选择
-      - https://cloudflare-dns.com/dns-query#在此选择节点&h3=false
+      - https://dns.google/dns-query#在此选择节点&h3=false
     "+.openwrt.ai":
       - quic://dns.alidns.com#DIRECT
       - https://doh.pub/dns-query#DIRECT
