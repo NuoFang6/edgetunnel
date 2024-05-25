@@ -1,5 +1,4 @@
 RULE-SET,AWAvenue
 RULE-SET,AdRules
-AND,((NETWORK,UDP),(DST-PORT,443,no-resolve))
 AND,((NETWORK,UDP),(GEOSITE,geolocation-!cn))
 AND,((NETWORK,UDP),(GEOIP,!cn,no-resolve))
