@@ -6,8 +6,8 @@ find-process-mode: off
 keep-alive-interval: 1800
 global-client-fingerprint: random
 geox-url:
-  geoip: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
-  geosite: https://mirror.ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+  geoip: https://gitmi.nuofang.cloudns.ch/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+  geosite: https://gitmi.nuofang.cloudns.ch/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
 geo-auto-update: true
 geo-update-interval: 24
 tcp-concurrent: true
@@ -97,7 +97,7 @@ rule-providers:
   AWAvenue:
     type: http
     path: ./AWAvenue.yaml
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
+    url: https://gitmi.nuofang.cloudns.ch/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
     interval: 86400
     proxy: DIRECT
     behavior: domain
