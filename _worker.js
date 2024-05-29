@@ -1263,7 +1263,7 @@ https://github.com/cmliu/edgetunnel
           url
         )}&insert=false&config=${encodeURIComponent(
           subconfig
-        )}&tls13=true&emoji=true&list=false&xudp=false&udp=false&tfo=true&expand=true&scv=false&fdn=false&new_name=true`;
+        )}&tls13=true&emoji=true&list=false&xudp=false&udp=false&tfo=true&expand=true&scv=true&fdn=false&new_name=true`;
         isBase64 = false;
       } else if (
         userAgent.includes("sing-box") ||
@@ -1275,7 +1275,7 @@ https://github.com/cmliu/edgetunnel
           url
         )}&insert=false&config=${encodeURIComponent(
           subconfig
-        )}&tls13=true&emoji=true&list=false&xudp=false&udp=false&tfo=true&expand=true&scv=false&fdn=false&new_name=true`;
+        )}&tls13=true&emoji=true&list=false&xudp=false&udp=false&tfo=true&expand=true&scv=true&fdn=false&new_name=true`;
         isBase64 = false;
       }
     }
