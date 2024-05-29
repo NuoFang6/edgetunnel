@@ -1,4 +1,7 @@
-ipv6: false
+inbound-tfo: true
+inbound-mptcp: true
+#! 实验性优化
+ipv6: true
 geodata-mode: true
 geosite-matcher: mph
 geodata-loader: memconservative
@@ -18,6 +21,13 @@ profile:
 dns:
   enable: true
   ipv6: false
+  prefer-h3: false
+  cache-algorithm: arc
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
   default-nameserver:
     - quic://223.5.5.5#DIRECT
     - https://1.12.12.12/dns-query#DIRECT&h3=false
@@ -27,6 +37,7 @@ dns:
     - https://doh.pub/dns-query#DIRECT&h3=false
   fallback:
     - tcp://8.8.4.4#自动选择
+    - tcp://8.8.4.4#在此选择节点
     - https://dns.google/dns-query#在此选择节点&h3=false
   fallback-filter:
     geoip: true
@@ -48,28 +59,29 @@ dns:
       - 224.0.0.0/4
       - 240.0.0.0/4
       - 255.255.255.255/32
-  enhanced-mode: redir-host
   proxy-server-nameserver:
     - quic://dns.alidns.com
     - https://doh.pub/dns-query
   nameserver-policy:
     "aeventlog.beacon.qq.com":
       - rcode://success
+    RULE-SET:AWAvenue,AdRules:
+      - rcode://success
     geosite:geolocation-!cn,microsoft,google,steam,tailscale:
       - tcp://8.8.8.8#自动选择
+      - tcp://8.8.8.8#在此选择节点
       - https://dns.google/dns-query#在此选择节点&h3=false
     "+.youtube.com,+.googlevideo.com,+.msftconnecttest.com,+.msftncsi.com,+.bing.com":
       - tcp://8.8.8.8#自动选择
+      - tcp://8.8.8.8#在此选择节点
       - https://dns.google/dns-query#在此选择节点&h3=false
     "+.openwrt.ai":
       - quic://dns.alidns.com#DIRECT
       - https://doh.pub/dns-query#DIRECT
-  prefer-h3: false
-  cache-algorithm: arc
 sniffer:
-  enable: true
+  enable: false
   force-dns-mapping: false
-  parse-pure-ip: true
+  parse-pure-ip: false
   force-domain:
     - +.netflix.com
     - +.nflxvideo.net
