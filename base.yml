@@ -63,10 +63,6 @@ dns:
     - quic://dns.alidns.com
     - https://doh.pub/dns-query
   nameserver-policy:
-    "aeventlog.beacon.qq.com":
-      - rcode://success
-    RULE-SET:AWAvenue,AdRules:
-      - rcode://success
     geosite:geolocation-!cn,microsoft,google,steam,tailscale:
       - tcp://8.8.8.8#自动选择
       - tcp://8.8.8.8#在此选择节点
