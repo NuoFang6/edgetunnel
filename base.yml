@@ -35,13 +35,8 @@ dns:
     - tcp://8.8.8.8#在此选择节点
     - https://dns.google/dns-query#在此选择节点&h3=false
   nameserver-policy:
-    geosite:microsoft@cn:
-      - quic://dns.alidns.com#DIRECT
     "+.openwrt.ai":
       - quic://dns.alidns.com#DIRECT
-    geosite:microsoft:
-      - tcp://8.8.8.8#在此选择节点
-      - https://dns.google/dns-query#在此选择节点&h3=false
     "+.msftconnecttest.com,+.msftncsi.com,+.bing.com,+.googleapis.cn":
       - tcp://8.8.8.8#在此选择节点
       - https://dns.google/dns-query#在此选择节点&h3=false
