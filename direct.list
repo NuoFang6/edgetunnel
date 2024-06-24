@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,mwm.moe
 DOMAIN-SUFFIX,lizi.moe
 DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,codelife.cc
+GEOSITE,microsoft@cn
 GEOSITE,win-update
 GEOSITE,cn
 GEOIP,cn,no-resolve
