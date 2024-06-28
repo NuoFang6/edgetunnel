@@ -1,1 +1,2 @@
-DOMAIN,aeventlog.beacon.qq.com
+DOMAIN-SUFFIX,aeventlog.beacon.qq.com
+DOMAIN-SUFFIX,browser-intake-datadoghq.com

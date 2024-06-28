@@ -32,13 +32,11 @@ dns:
   proxy-server-nameserver:
     - quic://dns.alidns.com
   fallback:
-    - tcp://8.8.8.8#在此选择节点
     - https://dns.google/dns-query#在此选择节点&h3=false
   nameserver-policy:
     "+.openwrt.ai":
       - quic://dns.alidns.com#DIRECT
     "+.msftconnecttest.com,+.msftncsi.com,+.bing.com,+.googleapis.cn":
-      - tcp://8.8.8.8#在此选择节点
       - https://dns.google/dns-query#在此选择节点&h3=false
   fallback-filter:
     geoip: false
@@ -103,14 +101,6 @@ sniffer:
         - 8443
   override-destination: true
 rule-providers:
-  AWAvenue:
-    type: http
-    path: ./AWAvenue.yaml
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
-    interval: 86400
-    proxy: DIRECT
-    behavior: domain
-    format: yaml
   AdRules:
     type: http
     path: ./AdRules.txt
