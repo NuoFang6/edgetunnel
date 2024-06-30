@@ -2,16 +2,8 @@ DOMAIN-KEYWORD,gstatic
 DOMAIN-KEYWORD,tailscale
 DOMAIN-KEYWORD,visualstudio
 DOMAIN-KEYWORD,bing
-DOMAIN-KEYWORD,ghproxy
 DOMAIN-KEYWORD,bard
 DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,lmsys.org
 DOMAIN-SUFFIX,jsdelivr.net
-GEOSITE,bing
-GEOSITE,steam
-GEOSITE,google
-GEOSITE,openai
-GEOSITE,anthropic
-GEOSITE,microsoft
-GEOIP,telegram,no-resolve
