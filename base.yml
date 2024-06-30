@@ -19,7 +19,7 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   use-hosts: false
   prefer-h3: false
   cache-algorithm: arc
