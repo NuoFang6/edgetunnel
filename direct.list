@@ -1,4 +1,4 @@
-GEOIP,private
+GEOIP,private,no-resolve
 DOMAIN-KEYWORD,ubisoft
 DOMAIN-KEYWORD,icve
 DOMAIN-KEYWORD,zhihuishu
@@ -7,4 +7,4 @@ DOMAIN-SUFFIX,mwm.moe
 DOMAIN-SUFFIX,lizi.moe
 DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,codelife.cc
-GEOIP,cn
+GEOIP,cn,no-resolve
