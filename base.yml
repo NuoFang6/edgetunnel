@@ -101,11 +101,10 @@ sniffer:
         - 8443
   override-destination: true
 rule-providers:
-  AdRules:
+  秋风广告规则:
     type: http
-    path: ./AdRules.txt
-    url: https://adrules.top/adrules_domainset.txt
-    interval: 86400
-    proxy: DIRECT
     behavior: domain
-    format: text
+    format: yaml
+    path: ./AWAvenue-Ads-Rule-Clash.yaml
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+    interval: 60480
